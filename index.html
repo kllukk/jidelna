@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <title>Přihlášení do jídelny</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                border: 5px gray solid;
+                border-radius: 12px;
+                padding: 20px;
+            }
+            input {
+                margin: 5px;
+            }
+            input[type="hidden"] {
+                position: absolute;
+                bottom: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="https://www.strava.cz/Strava/Stravnik/prihlaseni" method="POST">
+            <input type="hidden" name="zarizeni" value="2204" style="display:none;">
+            <div class="wrapper">
+                <input type="text" name="uzivatel" placeholder="jmeno.prijmeni" required="required"><br>
+                <input type="password" name="heslo" placeholder="Vaše heslo" required="required"><br>
+                <input type="submit" value="Přihlásit se">
+            </div>
+        </form>
+    </body>
+</html>
